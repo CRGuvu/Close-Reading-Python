@@ -1,36 +1,47 @@
 ### Print a welcome message
-print("Welcome to the Haunted Mansion!")
-print("You are a distant family member of a rich millionaire who has just passed way, leaving this mansion to you.")
-print("As the newfound owner, you decide to pay a visit to the mansion.")
-print("The house is dated, creaky, and falling apart. You walk in the front door.")
-print("Do you want to enter the living room or the dining room?")
+print("Welcome to Danielstown")
+print("You are the sole member of a Anglo-Irish family.") 
+print("Your father who owed this estate has died.")
+print("We are leaving this estate to you, Try to navagate Danielstone.")
+print("The Montmoranys arive, They are saddend to hear of your fathers passing.")
+print("To lighten the mood they invite you to a extravagant part later today.")
+print("Do you attend the event, or politely decline?")
 
 ### Prompt user for a choice
-roomChoice = input("> ")
+convoChoice = input("> ")
 
-if(roomChoice == "living room"):
-  print("You enter the living room.")
-  print("As you walk in, you see a sleeping pitbull guarding some gold jewelry.")
-  print("Do you want to steal the jewelry from the pitbull?")
+if(convoChoice == "attend"):
+  print("You attend the party. You see many familes and a few officers")
+  print("As you walk in, one of the officers approaches you")
+  print("He wishes to dicuss the IRA and political events around Danielstown")
+  Print("Would you like to continue the discussion with him?")
 
-  pitBullChoice = input("> ")
+  officerChoice = input("> ")
 
-  if(pitBullChoice == "yes"):
-    print("You attempt to steal the jewelry, but it wakes up and rips you to shreds.")
-    print("You are now dead.")
-  elif(pitBullChoice == "no"):
-    print("You decide to not steal the dog's jewelry.")
-    print("You turn around and leave the house safely.")
+  if(officerChoice == "no"):
+    print("You quietly disengage the conversation.")
+    print("Better to ignore it.")
+  elif(officerChoice == "yes"):
+    print("You dicuss the activiy with great concern.")
+    print("From this you learn there has been more IRA activiy of recent.")
+    print("You ponder on the information you have learned and go back home")
   else:
     print("Invalid choice. Please enter yes or no.")
-elif(roomChoice == "dining room"):
-  print("You chose to go into the dining room.")
-  print("As you walk in, you see a shiny vase on the table.")
-  print("Do you want to open the vase?")
+elif(convoChoice == "decline"):
+  print("You are far to tired to thnk about such an event.")
+  print("You settle into bed. And fall asleep")
+  print("The IRA invades your house in the middle of the night")
+  Print("You never wake up, your family line ends that night")
 
-  vaseChoice = input("> ")
+### Next day
+print("It's the next day")
 
-  if(vaseChoice == "yes"):
+
+
+  
+  nextdayChoice = input("> "):
+
+  if(nextdayChoice == "yes"):
     print("You open the vase and find a pile of bones!")
   elif(vaseChoice == "no"):
     print("You decide not to open the shiny vase.")
@@ -40,4 +51,4 @@ elif(roomChoice == "dining room"):
   else:
     print("Invalid choice. Please enter yes or no.")
 else:
-  print("Invalid choice. Please enter living room or dining room.")
+  print("Invalid choice. Please enter attend or decline.")
