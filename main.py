@@ -50,30 +50,91 @@ print("Do you listen to them or continue walking?. ")
     print ("With slight regard you continue on. ")
   elif(nextdayChoice == "contine"):
     print("You decide you rather not know what these men are whispering about. ")
-    print("You continue on. ")
+    print("You continue on. ") 
   else:
     print("Invalid choice. Please enter listen or continue. ")
 
 storeChoice = input(">")
+
 print("As you contine you .")
 print("You stop inside a bakery. ")
 print("Along the shelf are line with varying products, you see a one that catches your eye. ")
 Print("A delicately crafed choclate cake, larger than anyone should need. ")
 Print("You can tell that hours if not days went into the icing and design")
 Print("Do you buy it or leave?")
-  if(storeChoice == "buy"):
+
+if(storeChoice == "buy"):
     print("You are in awe of it's beauty. ")
     print ("It's a shame something as grand your cake can't last forever.")
     print ("Even more unfortunate you drop it on the way back to your estate. ")
-  elif(storeChoice == "leave"):
+    
+elif(storeChoice == "leave"):
     print("While certianly beautiful you decide not to buy the cake.")
     print("Besides what use would you have for it?.")
-    print("You decide to head back to your estate")
-  else:
+    print("You decide to head back to your estate") 
+else:
     print("Invalid choice. Please enter buy or leave.")
 
+  EstateChoice = input("> ")
+    print("Back at your estate you settle into your chair. ")
+    print ("You hear a loud knock on the door.")
+    print ("Suprised you look at the door. You were not expecting any vistors ")
+    Print("Do you open the door?.")
+    
+  if(EstateChoice == "yes"):
+    if(officerChoice == "yes"):
+      if(nextdayChoice == "listen"):
+    print("You open the door to see armed men. ")
+    print("You remember what the officer told you, and the what the two men had talked about ")
+    print("These men are the IRA. ")
+    print("They relize you know who they are.")
+    print("Before you can talk, they break through your door. ")
+    print ("Your estate is gone and so are you. ")
+    Print("Ending One False connsciouness too self-aware.")
 
+if(EstateChoice == "Yes"):
+  if(officerChoice == "yes"):
+    if(nextdayChoice == "continue"):
+    print("You open the door to see armed men. ")
+    print("You remember what the officer told you, could this be the IRA?. ")
+    print("Doubful, they don't anyting like what he described. ")
+    print("They ask if you wouldn't mind them cutting aross your plantation. It is quicker to get into town that way. ")
+    print("You agree, and they go on thier way. You wonder a little why they are carrying so many guns? ")
 
+if(EstateChoice == "Yes"):
+   if(officerChoice == "no"):
+     if(nextdayChoice == "listen"):
+    print("You open the door to see armed men. ")
+    print("You remember hearing those two men whisper. ")
+    print("Doubful, they don't anyting like what he described ")
+    print("They ask if you wouldn't mind them cutting aross your plantation. It is quicker to get into town that way. ")
+    print("You agree, and they go on thier way. You wonder a little why they are carrying so many guns? ")
+
+  elif(estateChoice == "no"):
+    print("Ingoring the knocking you stay seated. ")
+    print("Moments later your door is busted down. ")
+    print("The IRA have invaded your estate. Your estate is gone and so are you. ")
+  else:
+    print("Invalid choice. Please enter yes or no.")
+
+### following day
+ Finalchoice = input("> ")
+
+    print("The following day you awake to the sound of a warning bell. ")
+    print("Frighted you run outside, in the distance you see the same officer apporach you ")
+    print(". ")
+
+if(Finalchoice == "yes"):
+    print("You are in awe of it's beauty. ")
+    print ("It's a shame something as grand your cake can't last forever.")
+    print ("Even more unfortunate you drop it on the way back to your estate. ")
+    
+elif(storeChoice == "leave"):
+    print("While certianly beautiful you decide not to buy the cake.")
+    print("Besides what use would you have for it?.")
+    print("You decide to head back to your estate") 
+else:
+    print("Invalid choice. Please enter buy or leave.")
 
 
 
