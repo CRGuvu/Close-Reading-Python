@@ -1,148 +1,172 @@
-# Print a welcome message
-print("Welcome to Danielstown.")
-print("You are a member of an Anglo-Irish aristocratic family.")
-print("Your father, who has died, left you the estate.")
-print("Now, being the sole member of your family, try to navigate Danielstown.")
+def main():
+    print("Welcome to Danielstown.")
+    print("You are a member of an Anglo-Irish aristocratic family.")
+    print("Your father, who has died, left you the estate.")
+    print("Now, being the sole member of your family, try to navigate Danielstown.")
 
-print("\nYour family friends, the Naylors, have stopped by your estate.")
-print("They are saddened to hear of your father's passing.")
-print("To lighten the mood, they invite you to an extravagant party later today.")
-print("Do you attend the event or politely decline? (Type 'attend' or 'decline')")
+    print("\nYour family friends, the Naylors, have stopped by your estate.")
+    print("They are saddened to hear of your father's passing.")
+    print("To lighten the mood, they invite you to an extravagant party later today.")
+    print("Do you attend the event or politely decline? (Type 'attend' or 'decline')")
 
-# Prompt user for a choice
-convoChoice = input("> ").lower()
+    while True:
+        convoChoice = input("> ").lower()
+        if convoChoice == "attend":
+            officerChoice = attend_party()
+            break
+        elif convoChoice == "decline":
+            decline_party()
+            return  # Game ends
+        else:
+            print("Invalid choice. Please enter 'attend' or 'decline.'")
 
-if convoChoice == "attend":
+    nextdayChoice = next_day()
+
+    storeChoice = bakery_scene()
+
+    estateChoice = estate_scene(officerChoice, nextdayChoice)
+
+    final_scene(officerChoice, nextdayChoice, storeChoice)
+
+def attend_party():
     print("\nYou attend the party. You see many families and a few officers.")
     print("As you walk in, one of the officers approaches you.")
     print("He wishes to discuss the IRA and political events around Danielstown.")
     print("Would you like to continue the discussion with him? (yes/no)")
 
-    officerChoice = input("> ").lower()
+    while True:
+        officerChoice = input("> ").lower()
+        if officerChoice == "yes":
+            print("\nYou discuss the activity with great concern.")
+            print("From this, you learn there has been more IRA activity recently.")
+            print("You ponder on the information you have learned and go back home.")
+            return officerChoice
+        elif officerChoice == "no":
+            print("\nYou quietly disengage from the conversation.")
+            print("Better to ignore it.")
+            return officerChoice
+        else:
+            print("Invalid choice. Please enter 'yes' or 'no.'")
 
-    if officerChoice == "no":
-        print("\nYou quietly disengage from the conversation.")
-        print("Better to ignore it.")
-    elif officerChoice == "yes":
-        print("\nYou discuss the activity with great concern.")
-        print("From this, you learn there has been more IRA activity recently.")
-        print("You ponder on the information you have learned and go back home.")
-    else:
-        print("\nInvalid choice. Please enter 'yes' or 'no.'")
-        officerChoice = "no"
-elif convoChoice == "decline":
+def decline_party():
     print("\nYou are far too tired to think about such an event.")
     print("You settle into bed and fall asleep.")
     print("As soon as the sun goes down, the IRA breaks into your estate.")
     print("You never wake up; your family line ends that night.")
-    # Game ends here if declined the invitation
-    exit()
-else:
-    print("\nInvalid choice. Please enter 'attend' or 'decline.'")
-    # You may want to loop back for a valid input
+    print("Game Over.")
     exit()
 
-# Next day
-print("\nIt's the next day.")
-print("You decide to take a walk downtown.")
-print("You pass by two men whispering in a corner.")
-print("Do you listen to them or continue walking? (listen/continue)")
+def next_day():
+    print("\nIt's the next day.")
+    print("You decide to take a walk downtown.")
+    print("You pass by two men whispering in a corner.")
+    print("Do you listen to them or continue walking? (listen/continue)")
 
-nextdayChoice = input("> ").lower()
+    while True:
+        nextdayChoice = input("> ").lower()
+        if nextdayChoice == "listen":
+            print("\n'What was that? Something about guns in a plantation?'")
+            print("Ridiculous.")
+            print("With slight regard, you continue on.")
+            return nextdayChoice
+        elif nextdayChoice == "continue":
+            print("\nYou decide you'd rather not know what these men are whispering about.")
+            print("You continue on.")
+            return nextdayChoice
+        else:
+            print("Invalid choice. Please enter 'listen' or 'continue.'")
 
-if nextdayChoice == "listen":
-    print("\n'What was that? Something about guns in a plantation?'")
-    print("Ridiculous.")
-    print("With slight regard, you continue on.")
-elif nextdayChoice == "continue":
-    print("\nYou decide you'd rather not know what these men are whispering about.")
-    print("You continue on.")
-else:
-    print("\nInvalid choice. Please enter 'listen' or 'continue.'")
-    nextdayChoice = "continue"
+def bakery_scene():
+    print("\nAs you continue, you stop inside a bakery.")
+    print("Along the shelves lined with various products, you see one that catches your eye.")
+    print("A delicately crafted chocolate cake, larger than anyone should need.")
+    print("You can tell that hours, if not days, went into the icing and design.")
+    print("Do you buy it or leave? (buy/leave)")
 
-print("\nAs you continue, you stop inside a bakery.")
-print("Along the shelves lined with various products, you see one that catches your eye.")
-print("A delicately crafted chocolate cake, larger than anyone should need.")
-print("You can tell that hours, if not days, went into the icing and design.")
-print("Do you buy it or leave? (buy/leave)")
+    while True:
+        storeChoice = input("> ").lower()
+        if storeChoice == "buy":
+            print("\nYou are in awe of its beauty.")
+            print("It's a shame something as grand as your cake can't last forever.")
+            print("Even more unfortunate, you drop it on the way back to your estate.")
+            return storeChoice
+        elif storeChoice == "leave":
+            print("\nWhile certainly beautiful, you decide not to buy the cake.")
+            print("Besides, what use would you have for it?")
+            print("You decide to head back to your estate.")
+            return storeChoice
+        else:
+            print("Invalid choice. Please enter 'buy' or 'leave.'")
 
-storeChoice = input("> ").lower()
+def estate_scene(officerChoice, nextdayChoice):
+    print("\nBack at your estate, you settle into your chair.")
+    print("You hear a loud knock on the door.")
+    print("Surprised, you look at the door. You were not expecting any visitors.")
+    print("Do you open the door? (yes/no)")
 
-if storeChoice == "buy":
-    print("\nYou are in awe of its beauty.")
-    print("It's a shame something as grand as your cake can't last forever.")
-    print("Even more unfortunate, you drop it on the way back to your estate.")
-elif storeChoice == "leave":
-    print("\nWhile certainly beautiful, you decide not to buy the cake.")
-    print("Besides, what use would you have for it?")
-    print("You decide to head back to your estate.")
-else:
-    print("\nInvalid choice. Please enter 'buy' or 'leave.'")
-    storeChoice = "leave"
+    while True:
+        estateChoice = input("> ").lower()
+        if estateChoice == "yes":
+            if officerChoice == "yes" and nextdayChoice == "listen":
+                print("\nYou open the door to see armed men.")
+                print("You remember what the officer told you and what the two men had talked about.")
+                print("These men are the IRA.")
+                print("They realize you know who they are.")
+                print("Before you can talk, they break through your door.")
+                print("Your estate is gone, and so are you.")
+                print("Ending One: False consciousness too self-aware.")
+                exit()
+            elif officerChoice == "yes" and nextdayChoice == "continue":
+                print("\nYou open the door to see armed men.")
+                print("You remember what the officer told you. Could this be the IRA?")
+                print("Doubtful; they don't look anything like what he described.")
+                print("They ask if you wouldn't mind them cutting across your plantation. It's quicker to get into town that way.")
+                print("You agree, and they go on their way. You wonder a little why they are carrying so many guns?")
+                return estateChoice
+            elif officerChoice == "no" and nextdayChoice == "listen":
+                print("\nYou open the door to see armed men.")
+                print("You remember hearing those two men whisper.")
+                print("Doubtful; they don't look anything like what you expected.")
+                print("They ask if you wouldn't mind them cutting across your plantation. It's quicker to get into town that way.")
+                print("You agree, and they go on their way. You wonder a little why they are carrying so many guns?")
+                return estateChoice
+            else:
+                print("\nYou open the door to see strangers carrying weapons.")
+                print("Uncertain of their intentions, you feel uneasy.")
+                print("They nod at you and pass by without incident.")
+                return estateChoice
+        elif estateChoice == "no":
+            print("\nIgnoring the knocking, you stay seated.")
+            print("Moments later, your door is busted down.")
+            print("The IRA has invaded your estate. Your estate is gone, and so are you.")
+            print("Game Over.")
+            exit()
+        else:
+            print("Invalid choice. Please enter 'yes' or 'no.'")
 
-print("\nBack at your estate, you settle into your chair.")
-print("You hear a loud knock on the door.")
-print("Surprised, you look at the door. You were not expecting any visitors.")
-print("Do you open the door? (yes/no)")
+def final_scene(officerChoice, nextdayChoice, storeChoice):
+    print("\nThe following day, you awake to the sound of a warning bell.")
+    print("Frightened, you run outside.")
+    print("Are you ready to see what awaits you? (yes)")
 
-estateChoice = input("> ").lower()
+    while True:
+        finalChoice = input("> ").lower()
+        if finalChoice == "yes":
+            if storeChoice == "buy" and officerChoice == "yes" and nextdayChoice == "continue":
+                print("\nIn the distance, you see the same officer you talked to approaching you.")
+                print("He yells at you to follow him.")
+                print("You manage to escape your estate moments before the IRA arrives.")
+                print("You no longer have your estate, but you managed to save yourself.")
+                print("Ending: Bourgeoisie wins.")
+                exit()
+            else:
+                print("\nYou see an angry mob running toward your estate.")
+                print("They appear to be heavily armed. You realize this must be the IRA.")
+                print("The IRA has invaded your estate. Your estate is gone, and so are you.")
+                print("Game Over.")
+                exit()
+        else:
+            print("Invalid choice. It was a rhetorical question; you must select 'yes.'")
 
-if estateChoice == "yes":
-    if officerChoice == "yes" and nextdayChoice == "listen":
-        print("\nYou open the door to see armed men.")
-        print("You remember what the officer told you and what the two men had talked about.")
-        print("These men are the IRA.")
-        print("They realize you know who they are.")
-        print("Before you can talk, they break through your door.")
-        print("Your estate is gone, and so are you.")
-        print("Ending One: False consciousness too self-aware.")
-        exit()
-    elif officerChoice == "yes" and nextdayChoice == "continue":
-        print("\nYou open the door to see armed men.")
-        print("You remember what the officer told you. Could this be the IRA?")
-        print("Doubtful; they don't look anything like what he described.")
-        print("They ask if you wouldn't mind them cutting across your plantation. It's quicker to get into town that way.")
-        print("You agree, and they go on their way. You wonder a little why they are carrying so many guns?")
-    elif officerChoice == "no" and nextdayChoice == "listen":
-        print("\nYou open the door to see armed men.")
-        print("You remember hearing those two men whisper.")
-        print("Doubtful; they don't look anything like what you expected.")
-        print("They ask if you wouldn't mind them cutting across your plantation. It's quicker to get into town that way.")
-        print("You agree, and they go on their way. You wonder a little why they are carrying so many guns?")
-    else:
-        print("\nYou open the door to see strangers carrying weapons.")
-        print("Uncertain of their intentions, you feel uneasy.")
-        print("They nod at you and pass by without incident.")
-elif estateChoice == "no":
-    print("\nIgnoring the knocking, you stay seated.")
-    print("Moments later, your door is busted down.")
-    print("The IRA has invaded your estate. Your estate is gone, and so are you.")
-    exit()
-else:
-    print("\nInvalid choice. Please enter 'yes' or 'no.'")
-    estateChoice = "no"
-
-# Following day
-print("\nThe following day, you awake to the sound of a warning bell.")
-print("Frightened, you run outside.")
-print("Are you ready to see what awaits you? (yes)")
-
-finalChoice = input("> ").lower()
-
-if finalChoice == "yes":
-    if storeChoice == "buy" and officerChoice == "yes" and nextdayChoice == "continue":
-        print("\nIn the distance, you see the same officer you talked to approaching you.")
-        print("He yells at you to follow him.")
-        print("You manage to escape your estate moments before the IRA arrives.")
-        print("You no longer have your estate, but you managed to save yourself.")
-        print("Ending: Bourgeoisie wins.")
-    else:
-        print("\nYou see an angry mob running toward your estate.")
-        print("They appear to be heavily armed. You realize this must be the IRA.")
-        print("The IRA has invaded your estate. Your estate is gone, and so are you.")
-        exit()
-else:
-    print("\nInvalid choice. It was a rhetorical question; you must select 'yes.'")
-    # Optionally loop back or exit
-    exit()
+if __name__ == "__main__":
+    main()
