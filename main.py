@@ -144,8 +144,3 @@ elif(FinaleChoice == "yes"):
   
 else:
     print("Invalid choice. It was a retorical question, you must select yes.")
-
-
-
-
-
