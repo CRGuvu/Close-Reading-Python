@@ -1,8 +1,9 @@
 ### Print a welcome message
-print("Welcome to Danielstown")
+print("Welcome to Danielstown.")
 print("You are the sole member of a Anglo-Irish family.") 
 print("Your father who owed this estate has died.")
-print("We are leaving this estate to you, Try to navagate Danielstone.")
+print("We are leaving this estate to you, Try to navagate Danielstown.")
+
 print("The Montmoranys arive, They are saddend to hear of your fathers passing.")
 print("To lighten the mood they invite you to a extravagant part later today.")
 print("Do you attend the event, or politely decline?")
@@ -11,9 +12,9 @@ print("Do you attend the event, or politely decline?")
 convoChoice = input("> ")
 
 if(convoChoice == "attend"):
-  print("You attend the party. You see many familes and a few officers")
-  print("As you walk in, one of the officers approaches you")
-  print("He wishes to dicuss the IRA and political events around Danielstown")
+  print("You attend the party. You see many familes and a few officers.")
+  print("As you walk in, one of the officers approaches you.")
+  print("He wishes to dicuss the IRA and political events around Danielstown.")
   Print("Would you like to continue the discussion with him?")
 
   officerChoice = input("> ")
@@ -24,7 +25,7 @@ if(convoChoice == "attend"):
   elif(officerChoice == "yes"):
     print("You dicuss the activiy with great concern.")
     print("From this you learn there has been more IRA activiy of recent.")
-    print("You ponder on the information you have learned and go back home")
+    print("You ponder on the information you have learned and go back home.")
   else:
     print("Invalid choice. Please enter yes or no.")
 elif(convoChoice == "decline"):
@@ -32,17 +33,17 @@ elif(convoChoice == "decline"):
   print("You settle into bed. And fall asleep")
   print("The IRA invades your house in the middle of the night")
   Print("You never wake up, your family line ends that night")
-
+else:
+  print("Invalid choice. Please enter attend or decline.")
 ### Next day
+nextdayChoice = input("> "):
 print("It's the next day")
-
-
-
-  
-  nextdayChoice = input("> "):
+print("You decide to take a walk downtown.")
+print(".")
 
   if(nextdayChoice == "yes"):
-    print("You open the vase and find a pile of bones!")
+    print("What was that something about guns in a plantation?")
+    print ("Ridiculous.")
   elif(vaseChoice == "no"):
     print("You decide not to open the shiny vase.")
     print("As you turn to leave, you hear a cracking sound coming from the corner.")
@@ -50,5 +51,4 @@ print("It's the next day")
     print("You wake up in your bed. It was all a dream.")
   else:
     print("Invalid choice. Please enter yes or no.")
-else:
-  print("Invalid choice. Please enter attend or decline.")
+
