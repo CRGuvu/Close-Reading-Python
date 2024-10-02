@@ -121,20 +121,29 @@ if(EstateChoice == "Yes"):
  Finalchoice = input("> ")
 
     print("The following day you awake to the sound of a warning bell. ")
-    print("Frighted you run outside, in the distance you see the same officer apporach you ")
-    print(". ")
-
-if(Finalchoice == "yes"):
-    print("You are in awe of it's beauty. ")
-    print ("It's a shame something as grand your cake can't last forever.")
-    print ("Even more unfortunate you drop it on the way back to your estate. ")
+    print("Frighted you run outside, ")
+    print("Are you ready to see what awaits you?")
     
-elif(storeChoice == "leave"):
-    print("While certianly beautiful you decide not to buy the cake.")
-    print("Besides what use would you have for it?.")
-    print("You decide to head back to your estate") 
+if(Finalchoice == "yes"):
+if(storeChoice == "buy"):
+if(officerChoice == "yes"):
+if(nextdayChoice == "continue"):
+    print("In the distance you see the same officer you, talked to approach you. ")
+    print("He yells at you to follow him.")
+    print ("You manage to escape your estate moments before the IRA arrives. ")
+    print ("You no longer have your estate, but your mangaged to save yourself. ")
+    print("End 3 bourqeoise wins")
+    
+elif(FinaleChoice == "yes"):
+  if(officerChoice == "no"):
+    if(nextdayChoice == "listen"):
+      if(storeChoice == "buy"):
+    print("You see an angry mob running toward your estate.")
+    print("They appear to be heavliy armed. You relize this must be the IRA")
+    print("The IRA have invaded your estate. Your estate is gone and so are you. ")
+  
 else:
-    print("Invalid choice. Please enter buy or leave.")
+    print("Invalid choice. It was a retorical question, you must select yes.")
 
 
 
